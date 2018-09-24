@@ -1,0 +1,42 @@
+create table Employee
+(
+EmployeeId number primary key,
+EmplyeeName varchar(20) not null,
+EmplyeeAdress varchar(20),
+DOB DATE,
+DOJ DATE,
+Salary number
+);
+
+insert into employee values(1000,'Shyam','Hyderabad', TO_DATE('27/02/1997', 'DD/MM/YYYY'),TO_DATE('17/12/2015', 'DD/MM/YYYY'));
+insert into employee values(1001,'Shiv','Delhi', TO_DATE('07/12/1997', 'DD/MM/YYYY'),TO_DATE('17/07/2013', 'DD/MM/YYYY'),35000);
+insert into employee values(1002,'Rajesh','Kolkata', TO_DATE('27/02/1997', 'DD/MM/YYYY'),TO_DATE('14/12/2016', 'DD/MM/YYYY'),20000);
+insert into employee values(1003,'Bhuban','Bhubaneswar', TO_DATE('18/04/1997', 'DD/MM/YYYY'),TO_DATE('07/12/2015', 'DD/MM/YYYY'),30000);
+insert into employee values(1004,'Parth','Pune', TO_DATE('09/06/1997', 'DD/MM/YYYY'),TO_DATE('17/08/2015', 'DD/MM/YYYY'),34000);
+
+select * from Employee;
+select * from employee where salary >20000;
+select * from Employee where EmplyeeAdress LIKE '%a' OR EmplyeeAdress LIKE '%P' OR EmplyeeAdress LIKE '%i';
+
+
+
+update employee Set salary = salary+(salary*0.2);
+select * from employee where salary < 5000;
+
+Alter table employee add email varchar(20);
+
+update employee set Email='shyam@gmail.com' where employeeId = 1000;
+update employee set Email='shiv@gmail.com' where employeeId = 1001;
+update employee set Email='rajesh@gmail.com' where employeeId = 1002;
+update employee set Email='bhuban@gmail.com' where employeeId = 1003;
+update employee set Email='parth@gmail.com' where employeeId = 1004;
+
+
+
+
+
+
+
+
+
+
